@@ -33,6 +33,14 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'no-param-reassign': [
+      'error',
+      {
+        ignorePropertyModificationsFor: [
+          'state',
+        ],
+      },
+    ],
   },
   settings: {
     'import/resolver': {
