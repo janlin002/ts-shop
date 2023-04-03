@@ -37,7 +37,7 @@ module.exports = {
       'error',
       {
         ignorePropertyModificationsFor: [
-          'state',
+          'state', // 避免 reducer 的 state 抱錯
         ],
       },
     ],
