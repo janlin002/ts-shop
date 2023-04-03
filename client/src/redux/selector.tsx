@@ -1,6 +1,6 @@
 import type {
   CounterState,
-} from './reducer';
+} from './reducer/type';
 
 export const test = (state: CounterState) => (
   state.value

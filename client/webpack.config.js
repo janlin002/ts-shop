@@ -35,7 +35,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
-      Redux: path.resolve(__dirname, 'src/redux'),
+      '@': path.resolve(__dirname, 'src'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@redux': path.resolve(__dirname, 'src/redux'),
     },
   },
 };
