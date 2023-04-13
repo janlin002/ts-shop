@@ -30,6 +30,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   resolve: {
@@ -38,6 +42,8 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@redux': path.resolve(__dirname, 'src/redux'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@asset': path.resolve(__dirname, 'src/asset'),
     },
   },
 };

@@ -1,0 +1,17 @@
+.header-bar{
+    min-height: 80px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left-logo-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text{
+    color: #ee4d2d;
+    font-size: 30px
+}

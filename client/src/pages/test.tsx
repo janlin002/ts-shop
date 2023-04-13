@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from '@redux/store';
+// import type { RootState } from '@redux/store';
 
 import Test2 from '@pages/test2';
+import { test } from '@redux/selector';
 
 import {
   increment,
@@ -11,9 +12,10 @@ import {
 function Test() {
   const dispatch = useDispatch();
 
-  const count = useSelector((state: RootState) => state.counter.value);
+  // const count = useSelector((state: RootState) => state.counter.value);
+  const myTest = useSelector(test);
 
-  console.log(count, 'count');
+  console.log(myTest, 'count');
 
   return (
     <div>
