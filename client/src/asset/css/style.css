@@ -26,8 +26,9 @@ body{
     min-width: 400px;
     min-height: 450px;
     background-color: #fff;
-    padding: 50px;
+    padding: 20px;
     box-sizing: border-box;
+    margin-right: 100px
 }
 
 .normal-a-text{

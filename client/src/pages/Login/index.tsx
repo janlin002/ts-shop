@@ -5,7 +5,6 @@ const Content = lazy(() => import('./Content'));
 const Footer = lazy(() => import('./Footer'));
 
 function Login() {
-  console.log('123');
   return (
     <>
       <Header />

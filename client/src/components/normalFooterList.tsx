@@ -1,43 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// import
+import { Row, Col } from 'antd';
 
 import '@asset/css/style.css';
 
-interface DataType {
-  listData:{
-    mainTitle: string;
-    subContent: {
-      title: string;
-      href: string;
-    }[];
-  }
+interface SubContent {
+  title: string;
+  href: string;
 }
 
-function NormalFooterList({ listData } : DataType) {
+interface FooterDataType {
+  mainTitle: string;
+  subContent: SubContent[];
+}
+
+function NormalFooterList({ FooterData }: { FooterData: FooterDataType[] }) {
   return (
-    <div>
-      <p className="login-footer-main-text">
-        {listData.mainTitle}
-      </p>
-      {
-        listData.subContent.map((item) => (
-          <div>
-            <a className="login-footer-sub-text" href={item.href}>
-              {item.title}
-            </a>
-          </div>
+    <Row style={{ margin: '30px' }}>
+      <Col span={16} offset={4}>
+        <div className="login-footer-bar">
+          {
+            FooterData.map((item:any) => (
+              <div key={Math.random()}>
+                <p className="login-footer-main-text">
+                  {item.mainTitle}
+                </p>
+                <div>
+                  {
+                item.subContent.map((subItem:any) => (
+                  <div key={Math.random()}>
+                    <a className="login-footer-sub-text" href={subItem.href}>
+                      <div>{subItem.icon ? subItem.icon : ''}</div>
+                      {subItem.title}
+                    </a>
+                  </div>
 
-        ))
-      }
+                ))
+              }
+                </div>
+              </div>
+            ))
+    }
+        </div>
+      </Col>
+    </Row>
 
-    </div>
   );
 }
 
 export default NormalFooterList;
 
 NormalFooterList.propTypes = {
-  listData: PropTypes.instanceOf(Object).isRequired,
+  FooterData: PropTypes.instanceOf(Array).isRequired,
 };
