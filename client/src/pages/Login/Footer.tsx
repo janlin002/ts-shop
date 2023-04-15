@@ -1,43 +1,40 @@
 import React from 'react';
 
 import NormalFooterList from '@components/normalFooterList';
+import { Row, Col } from 'antd';
 
-const listData = {
-  mainTitle: '客服中心',
-  subContent: [
-    {
-      title: '幫助中心',
-      href: 'https://github.com/janlin002',
-    },
-    {
-      title: '幫助中心',
-      href: 'https://github.com/janlin002',
-    },
-    {
-      title: '幫助中心',
-      href: 'https://github.com/janlin002',
-    },
-    {
-      title: '幫助中心',
-      href: 'https://github.com/janlin002',
-    },
-    {
-      title: '幫助中心',
-      href: 'https://github.com/janlin002',
-    },
-    {
-      title: '幫助中心',
-      href: 'https://github.com/janlin002',
-    },
-  ],
-};
+import cusServices from '@asset/data/loginFooter';
 
 function Footer() {
+  // console.log(cusServices, 'cusServices');
   return (
-    <div className="login-footer-bar">
-      <NormalFooterList listData={listData} />
-      {/* <NormalFooterList /> */}
-    </div>
+    <Row style={{ margin: '30px' }}>
+      <Col span={16} offset={4}>
+        <div className="login-footer-bar">
+          <NormalFooterList
+            listData={cusServices}
+          />
+          <NormalFooterList
+            listData={cusServices}
+          />
+          <NormalFooterList
+            listData={cusServices}
+          />
+          <NormalFooterList
+            listData={cusServices}
+          />
+          <NormalFooterList
+            listData={cusServices}
+          />
+        </div>
+        {/* <hr style={{ marginTop: '40px', color: 'rgba(0, 0, 0, 0.26)' }} />
+        <div className="text-center">
+          @2023 Jan MADE. 版權所有。
+        </div> */}
+      </Col>
+
+    </Row>
+
   );
 }
 

@@ -1,5 +1,5 @@
 export interface CounterState {
-    counter: {
+    // counter: {
         value: number
-    }
+    // }
 }

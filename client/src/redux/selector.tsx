@@ -3,7 +3,7 @@ import type {
 } from './reducer/type';
 
 export const test = (state: CounterState) => (
-  state.counter.value
+  state.value
 );
 
 export const abc = (): string => '123';

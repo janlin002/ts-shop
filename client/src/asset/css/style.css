@@ -21,3 +21,33 @@ body{
 .login-footer-sub-text:hover{
     color: #ee4d2d;
 }
+
+.login-input{
+    min-width: 400px;
+    min-height: 450px;
+    background-color: #fff;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.normal-a-text{
+    font-size: 12px;
+    color: #05a
+}
+
+.login-new-user{
+    display: flex;
+    justify-content: center;
+    margin: 40px
+}
+
+.grey-a-text {
+    font-size: 12px;
+    color: rgba(0,0,0,.26)
+}
+
+.login-link-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

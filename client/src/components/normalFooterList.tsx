@@ -1,33 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// import
+
 import '@asset/css/style.css';
 
-// type SubContent = {
-//     title: string,
-//     href: string
-// }
-
-type DataType = {
-  listData: {
-    mainTitle: string,
-    subContent: [
-        {
-            title: string,
-            href: string
-        }
-    ]
+interface DataType {
+  listData:{
+    mainTitle: string;
+    subContent: {
+      title: string;
+      href: string;
+    }[];
   }
 }
 
-function NormalFooterList(props : DataType) {
+function NormalFooterList({ listData } : DataType) {
   return (
     <div>
       <p className="login-footer-main-text">
-        {props.listData.mainTitle}
+        {listData.mainTitle}
       </p>
       {
-        props.listData.subContent.map((item) => (
+        listData.subContent.map((item) => (
           <div>
             <a className="login-footer-sub-text" href={item.href}>
               {item.title}
@@ -43,6 +38,6 @@ function NormalFooterList(props : DataType) {
 
 export default NormalFooterList;
 
-// NormalFooterList.propTypes = {
-//   props: PropTypes.instanceOf(Object).isRequired,
-// };
+NormalFooterList.propTypes = {
+  listData: PropTypes.instanceOf(Object).isRequired,
+};
