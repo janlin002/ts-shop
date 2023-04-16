@@ -6,10 +6,32 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import IconButton from '@components/iconButton';
+import FormErrorMeesage from '@utils/formErrorMessage';
+
+const initValue = {
+  userInfo: '',
+  userPwd: '',
+};
 
 function LoginInput() {
+  const formik = useFormik({
+    initialValues: initValue,
+    validationSchema: Yup.object().shape({
+      userInfo: Yup.string()
+        .required('請填寫此欄位'),
+      userPwd: Yup.string()
+        .required('請填寫此欄位'),
+    }),
+    onSubmit: () => console.log('123'),
+  });
+
+  /**
+   * user: 不限制格式
+   * pwd: 只能是數字跟英文
+   */
+
   return (
-    <form action="">
+    <form onSubmit={formik.handleSubmit}>
       <div className="login-input">
         <h1>
           登入
@@ -17,6 +39,16 @@ function LoginInput() {
         <Input
           placeholder="電話號碼/使用者名稱/Email"
           style={{ marginTop: '10px', marginBottom: '10px' }}
+          id="userInfo"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          status={
+            formik?.errors?.userInfo ? 'error' : ''
+          }
+        />
+        <FormErrorMeesage
+          formik={formik}
+          id="userInfo"
         />
         <div>
           <Input.Password
@@ -24,6 +56,16 @@ function LoginInput() {
             style={{ marginTop: '10px', marginBottom: '10px' }}
           // eslint-disable-next-line react/no-unstable-nested-components
             iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+            id="userPwd"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            status={
+              formik?.errors?.userPwd ? 'error' : ''
+            }
+          />
+          <FormErrorMeesage
+            formik={formik}
+            id="userPwd"
           />
         </div>
 
@@ -31,6 +73,7 @@ function LoginInput() {
           style={{ width: '100%', marginTop: '10px', marginBottom: '10px' }}
           type="primary"
           danger
+          htmlType="submit"
         >
           登入
         </Button>
