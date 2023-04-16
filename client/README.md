@@ -11,8 +11,8 @@
 
 ### 登入頁
 
-![login](./src/asset/image/login.png)
-
 使用技術:
 - antd 做切版
 - formik + yup 確定顧客有填寫
+
+### 功能展示

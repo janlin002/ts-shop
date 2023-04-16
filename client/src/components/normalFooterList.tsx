@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'antd';
 
+import icon from '@utils/icon';
+
 import '@asset/css/style.css';
 
 interface SubContent {
   title: string;
   href: string;
+  icon: string
 }
 
 interface FooterDataType {
@@ -30,7 +33,9 @@ function NormalFooterList({ FooterData }: { FooterData: FooterDataType[] }) {
                 item.subContent.map((subItem:any) => (
                   <div key={Math.random()}>
                     <a className="login-footer-sub-text" href={subItem.href}>
-                      <div>{subItem.icon ? subItem.icon : ''}</div>
+                      {subItem.icon
+                        ? icon(subItem.icon)
+                        : ''}
                       {subItem.title}
                     </a>
                   </div>

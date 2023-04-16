@@ -44,6 +44,7 @@ module.exports = {
       '@redux': path.resolve(__dirname, 'src/redux'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@asset': path.resolve(__dirname, 'src/asset'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
     },
   },
 };
