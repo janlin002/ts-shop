@@ -5,9 +5,8 @@ import {
 
 import './asset/css/style.css';
 
-// import Test from './pages/test';
-
 const LoginPage = lazy(() => import('./pages/Login'));
+const MainPage = lazy(() => import('./pages/MainPage'));
 
 function App() {
   return (
@@ -31,7 +30,7 @@ function App() {
         </nav> */}
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
-            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/" element={<MainPage />} />
             <Route path="/login" element={<LoginPage />} />
           </Routes>
         </Suspense>
@@ -42,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+// 如果使用者未登入，導致登入頁

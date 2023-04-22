@@ -1,6 +1,9 @@
 body{
     margin: 0px;
 }
+a{
+    text-decoration: none;
+}
 
 .common-a-tag{
     text-decoration:none;

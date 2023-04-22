@@ -29,9 +29,9 @@ function Icon(iconName: string) {
       {
       icon
         ? (
-          <div style={{ marginRight: '3px' }}>
+          <span style={{ marginRight: '3px' }}>
             <FontAwesomeIcon icon={icon} />
-          </div>
+          </span>
 
         )
         : ''
