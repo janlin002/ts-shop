@@ -85,7 +85,9 @@
 }
 
 .category-title{
-    color: #8c8c8c
+    color: #8c8c8c;
+    margin: 10px;
+    font-size: 17px
 }
 
 .category-box-container{
