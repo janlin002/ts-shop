@@ -5,10 +5,12 @@ import voucherFakeData from '@asset/data/voucher';
 import shopeeIconList from '@asset/data/shopeeIcon';
 import VoucherIconList from '@components/voucherIconList';
 
-function Voucher() {
+import { StyledDiscountWrap } from './Discount.style';
+
+function Discount() {
   return (
     <>
-      <Box className="main-voucher-container">
+      <StyledDiscountWrap>
         <Carousel
           voucherFakeData={voucherFakeData}
           height="247px"
@@ -30,7 +32,7 @@ function Voucher() {
             />
           </Box>
         </Box>
-      </Box>
+      </StyledDiscountWrap>
       <VoucherIconList
         list={shopeeIconList}
       />
@@ -38,4 +40,4 @@ function Voucher() {
   );
 }
 
-export default Voucher;
+export default Discount;

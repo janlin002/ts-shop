@@ -1,13 +1,13 @@
 import React, { lazy } from 'react';
 
-const Header = lazy(() => import('./Header'));
-const Voucher = lazy(() => import('./Voucher'));
-const Categories = lazy(() => import('./Categories'));
+const Header = lazy(() => import('./Header/Header'));
+const Discount = lazy(() => import('./Discount/Discount'));
+const Categories = lazy(() => import('./Categories/Categories'));
 
 const index = () => (
   <>
     <Header />
-    <Voucher />
+    <Discount />
     <Categories />
   </>
 );
