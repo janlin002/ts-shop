@@ -8,7 +8,7 @@ import {
   faInstagramSquare,
   faLine,
 } from '@fortawesome/free-brands-svg-icons';
-
+import { Box } from '@mui/material';
 import {
   faCartShopping,
 } from '@fortawesome/free-solid-svg-icons';
@@ -22,8 +22,8 @@ function Header() {
   };
   return (
     <>
-      <div className="main-user-info-header">
-        <div className="main-right">
+      <Box className="main-user-info-header">
+        <Box className="main-right">
           <a href="123" className="main-user-info-href">
             賣家中心
           </a>
@@ -44,8 +44,8 @@ function Header() {
           <a href="123" className="main-user-info-icon">
             <FontAwesomeIcon icon={faLine} />
           </a>
-        </div>
-        <div className="main-right">
+        </Box>
+        <Box className="main-right">
           <a href="123" className="main-user-info-href">
             通知總覽
           </a>
@@ -63,10 +63,10 @@ function Header() {
             />
             <p>Janlin002</p>
           </a>
-        </div>
-      </div>
+        </Box>
+      </Box>
 
-      <div className="main-search-bar">
+      <Box className="main-search-bar">
         <img
           src="https://logodix.com/logo/2015036.png"
           alt=""
@@ -74,11 +74,11 @@ function Header() {
         />
 
         <Search placeholder="請輸入" onSearch={onSearch} style={{ width: '1000px', margin: '10px' }} />
-        <div className="main-shopping-cart">
+        <Box className="main-shopping-cart">
           <FontAwesomeIcon icon={faCartShopping} />
-        </div>
-        <div className="main-shopping-cart-number">123</div>
-      </div>
+        </Box>
+        <Box className="main-shopping-cart-number">123</Box>
+      </Box>
 
     </>
 

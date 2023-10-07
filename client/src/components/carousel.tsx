@@ -1,15 +1,16 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
 
-type voucher = {
-    voucherFakeData: {
+type Props = {
+    voucherFakeData: Array<{
         url: string
-    }[],
+    }>,
     height: string
 }
 
-function CustomCarousel({ voucherFakeData, height }: voucher) {
+function CustomCarousel({ voucherFakeData, height }: Props) {
   const contentStyle: React.CSSProperties = {
     color: '#fff',
     lineHeight: '160px',
@@ -22,9 +23,9 @@ function CustomCarousel({ voucherFakeData, height }: voucher) {
     <Carousel autoplay style={{ width: '750px' }}>
       {
             voucherFakeData.map((item) => (
-              <div>
+              <Box>
                 <img src={item?.url} alt="" style={contentStyle} />
-              </div>
+              </Box>
             ))
         }
 

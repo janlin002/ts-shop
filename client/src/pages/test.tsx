@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import type { RootState } from '@redux/store';
-
+import { Box } from '@mui/material';
 import Test2 from '@pages/test2';
 import { test } from '@redux/selector';
 
@@ -18,7 +18,7 @@ function Test() {
   console.log(myTest, 'count');
 
   return (
-    <div>
+    <Box>
       <button
         type="button"
         onClick={() => dispatch(increment())}
@@ -27,7 +27,7 @@ function Test() {
 
       </button>
       <Test2 />
-    </div>
+    </Box>
 
   );
 }

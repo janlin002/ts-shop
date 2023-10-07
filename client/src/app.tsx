@@ -1,7 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import {
-  HashRouter as Router, Route, Link, Routes, Navigate,
+  HashRouter as Router, Route, Routes,
 } from 'react-router-dom';
+import { Box } from '@mui/material';
 
 import './asset/css/style.css';
 
@@ -11,23 +12,7 @@ const MainPage = lazy(() => import('./pages/MainPage'));
 function App() {
   return (
     <Router>
-      <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/products/1">First Product</Link>
-            </li>
-            <li>
-              <Link to="/products/2">Second Product</Link>
-            </li>
-            <li>
-              <Link to="/login">LoginPage</Link>
-            </li>
-          </ul>
-        </nav> */}
+      <Box>
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route path="/" element={<MainPage />} />
@@ -35,7 +20,7 @@ function App() {
           </Routes>
         </Suspense>
 
-      </div>
+      </Box>
     </Router>
   );
 }

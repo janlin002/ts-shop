@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Box } from '@mui/material';
 import { Modal } from 'antd';
 
-interface NoFeatureType {
+type Props = {
     modalOpen: boolean,
-    handleModalClose: ()=>void
+    handleModalClose: () => void
 }
 
 function NoFeatureModal({
   modalOpen,
   handleModalClose,
-}: NoFeatureType) {
+}: Props) {
   return (
-    <div>
+    <Box>
       <Modal
         title="注意!"
         open={modalOpen}
@@ -23,7 +23,7 @@ function NoFeatureModal({
       >
         <p>目前功能尚未開放，敬請期待</p>
       </Modal>
-    </div>
+    </Box>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Box } from '@mui/material';
 import {
   faFacebook,
   faInstagramSquare,
@@ -25,7 +25,7 @@ const iconCheck = (iconName: string) => {
 function Icon(iconName: string) {
   const icon = iconCheck(iconName);
   return (
-    <div>
+    <Box>
       {
       icon
         ? (
@@ -36,7 +36,7 @@ function Icon(iconName: string) {
         )
         : ''
       }
-    </div>
+    </Box>
 
   );
 }

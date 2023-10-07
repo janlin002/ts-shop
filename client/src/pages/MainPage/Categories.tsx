@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'antd';
+import { Box } from '@mui/material';
 // import moment from 'moment';
 
 // import CategoriesBox from '@components/categoriesBox';
@@ -19,17 +20,17 @@ function Categories() {
   return (
     <Row>
       <Col span={14} offset={5}>
-        <div className="category-title">
+        <Box className="category-title">
           分類
-        </div>
-        <div className="category-box-container">
+        </Box>
+        <Box className="category-box-container">
           {CATEGORY_LIST.map((item) => (
-            <div className="category-box-content">
+            <Box className="category-box-content">
               <img src={item.image} alt="" className="category-box-image" />
               <p>{item.title}</p>
-            </div>
+            </Box>
           ))}
-        </div>
+        </Box>
       </Col>
     </Row>
   );

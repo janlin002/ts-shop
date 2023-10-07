@@ -1,10 +1,11 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
 function CategoriesBox() {
   return (
-    <div>
+    <Box>
       CategoriesBox
-    </div>
+    </Box>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Row } from 'antd';
-
+import { Box } from '@mui/material';
 import '../asset/css/style.css';
 
 type ListType = {
@@ -13,12 +13,12 @@ type ListType = {
 
 function VoucherIconList({ list }: ListType) {
   return (
-    <div className="icon-list-wrap">
+    <Box className="icon-list-wrap">
       <Row>
         <Col span={14} offset={5}>
-          <div className="icon-list-container">
+          <Box className="icon-list-container">
             {list.map((item) => (
-              <div
+              <Box
                 // eslint-disable-next-line jsx-a11y/aria-role
                 role="bitton"
                 className="icon-list-style"
@@ -35,12 +35,12 @@ function VoucherIconList({ list }: ListType) {
                   {item.info}
 
                 </p>
-              </div>
+              </Box>
             ))}
-          </div>
+          </Box>
         </Col>
       </Row>
-    </div>
+    </Box>
   );
 }
 

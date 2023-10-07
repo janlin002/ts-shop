@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@mui/material';
 
 function FormErrorMessage({
   formik,
@@ -8,15 +9,15 @@ function FormErrorMessage({
     id: string
 }) {
   return (
-    <div>
+    <Box>
       {
         formik.errors[id] && formik.touched[id] === true ? (
-          <div style={{ fontSize: '12px', color: '#ee4d2d' }}>
+          <Box style={{ fontSize: '12px', color: '#ee4d2d' }}>
             {formik.errors[id]}
-          </div>
+          </Box>
         ) : ''
     }
-    </div>
+    </Box>
   );
 }
 

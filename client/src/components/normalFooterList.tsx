@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'antd';
-
+import { Box } from '@mui/material';
 import icon from '@utils/icon';
 
 import '@asset/css/style.css';
 
-interface SubContent {
+type SubContent = {
   title: string;
   href: string;
   icon: string
 }
 
-interface FooterDataType {
+type FooterDataType = {
   mainTitle: string;
   subContent: SubContent[];
 }
@@ -21,32 +21,32 @@ function NormalFooterList({ FooterData }: { FooterData: FooterDataType[] }) {
   return (
     <Row style={{ margin: '30px' }}>
       <Col span={16} offset={4}>
-        <div className="login-footer-bar">
+        <Box className="login-footer-bar">
           {
             FooterData.map((item:any) => (
-              <div key={Math.random()}>
+              <Box key={Math.random()}>
                 <p className="login-footer-main-text">
                   {item.mainTitle}
                 </p>
-                <div>
+                <Box>
                   {
                 item.subContent.map((subItem:any) => (
-                  <div key={Math.random()}>
+                  <Box key={Math.random()}>
                     <a className="login-footer-sub-text" href={subItem.href}>
                       {subItem.icon
                         ? icon(subItem.icon)
                         : ''}
                       {subItem.title}
                     </a>
-                  </div>
+                  </Box>
 
                 ))
               }
-                </div>
-              </div>
+                </Box>
+              </Box>
             ))
     }
-        </div>
+        </Box>
       </Col>
     </Row>
 

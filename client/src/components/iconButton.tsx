@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button } from 'antd';
 import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
 
-interface Type {
+type Props = {
     iconLink: string,
     iconName: string
 }
 
-function IconButton({ iconLink, iconName }: Type) {
+function IconButton({ iconLink, iconName }: Props) {
   return (
     <Button
       style={{
@@ -18,9 +19,9 @@ function IconButton({ iconLink, iconName }: Type) {
       }}
     >
       <img style={{ width: '22px' }} src={iconLink} alt="" />
-      <div>
+      <Box>
         {iconName}
-      </div>
+      </Box>
     </Button>
   );
 }
