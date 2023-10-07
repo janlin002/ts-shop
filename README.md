@@ -1,12 +1,15 @@
 ## TS-shop
 
 ### front-end
-- react
-- redux-toolkit
-- typescript
-- react-query
+
+- React
+- Typescript
+- Redux-toolkit
+- RTK-query
+- Mui
+- Antd
 
 ### back-end
+
 - nodejs
 - express
-
