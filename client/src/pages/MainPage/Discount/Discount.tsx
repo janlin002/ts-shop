@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import Carousel from '@components/carousel';
 import voucherFakeData from '@asset/data/voucher';
 import shopeeIconList from '@asset/data/shopeeIcon';
-import VoucherIconList from '@components/voucherIconList';
+import DiscounIconList from '@components/DiscounIconList/DiscounIconList';
+import { Image } from 'mui-image';
 
-import { StyledDiscountWrap } from './Discount.style';
+import { StyledDiscountWrap, StyledDiscountImageGroup } from './Discount.style';
 
 function Discount() {
   return (
@@ -15,25 +15,21 @@ function Discount() {
           voucherFakeData={voucherFakeData}
           height="247px"
         />
-        <Box>
-          <Box>
-            <img
-              className="main-voucher-mini-img mini-img-1"
-              src={voucherFakeData[1]?.url}
-              alt=""
-            />
-          </Box>
+        <StyledDiscountImageGroup>
+          <Image
+            width={400}
+            src={voucherFakeData[1]?.url}
+            alt=""
+          />
 
-          <Box>
-            <img
-              className="main-voucher-mini-img mini-img-2"
-              src={voucherFakeData[2]?.url}
-              alt=""
-            />
-          </Box>
-        </Box>
+          <Image
+            width={400}
+            src={voucherFakeData[2]?.url}
+            alt=""
+          />
+        </StyledDiscountImageGroup>
       </StyledDiscountWrap>
-      <VoucherIconList
+      <DiscounIconList
         list={shopeeIconList}
       />
     </>

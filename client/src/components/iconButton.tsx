@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
+import { Image } from 'mui-image';
 
 type Props = {
     iconLink: string,
@@ -18,7 +19,7 @@ function IconButton({ iconLink, iconName }: Props) {
         width: '48%',
       }}
     >
-      <img style={{ width: '22px' }} src={iconLink} alt="" />
+      <Image width={22} src={iconLink} alt="" />
       <Box>
         {iconName}
       </Box>

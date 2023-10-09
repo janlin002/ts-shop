@@ -8,3 +8,12 @@ export const StyledDiscountWrap = styled(Box)(() => ({
 StyledDiscountWrap.defaultProps = {
   my: '30px',
 };
+
+export const StyledDiscountImageGroup = styled(Box)(() => ({
+  display: 'flex',
+  flexDirection: 'column',
+  rowGap: '7px',
+}));
+StyledDiscountImageGroup.defaultProps = {
+  ml: '6px',
+};

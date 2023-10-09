@@ -27,27 +27,3 @@
   display: flex;
   align-items: center;
 }
-.main-user {
-  display: flex;
-  color: #fff;
-  font-size: 13px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.main-voucher-mini-img {
-  width: 400px;
-}
-.mini-img-1 {
-  margin-bottom: 1px;
-  margin-left: 6px;
-}
-.mini-img-2 {
-  margin-top: 1px;
-  margin-left: 6px;
-}
-.category-box-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  flex: 1;
-}

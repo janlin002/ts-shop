@@ -1,82 +1,65 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
-a{
-    text-decoration: none;
-}
-
-.common-a-tag{
-    text-decoration:none;
-    color: #ee4d2d;
+a {
+  text-decoration: none;
 }
 
-.login-footer-main-text{
-    font-size: .75rem;
-    color: rgba(0,0,0,.87)
+.common-a-tag {
+  text-decoration: none;
+  color: #ee4d2d;
 }
 
-.login-footer-sub-text{
-    font-size: .75rem;
-    color: rgba(0,0,0,.65);
-    text-decoration: none;
-    display: flex;
+.login-footer-main-text {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.87);
 }
 
-.login-footer-sub-text:hover{
-    color: #ee4d2d;
+.login-footer-sub-text {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+  display: flex;
 }
 
-.login-input{
-    min-width: 400px;
-    min-height: 450px;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-right: 100px
+.login-footer-sub-text:hover {
+  color: #ee4d2d;
 }
 
-.normal-a-text{
-    font-size: 12px;
-    color: #05a
+.login-input {
+  min-width: 400px;
+  min-height: 450px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-right: 100px;
 }
 
-.login-new-user{
-    display: flex;
-    justify-content: center;
-    margin: 40px
+.normal-a-text {
+  font-size: 12px;
+  color: #05a;
+}
+
+.login-new-user {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
 }
 
 .grey-a-text {
-    font-size: 12px;
-    color: rgba(0,0,0,.26)
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.26);
 }
 
-.login-link-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.login-link-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.normal-input:focus{
-    border-color: #ee4d2d;
+.normal-input:focus {
+  border-color: #ee4d2d;
 }
-.normal-input:hover{
-    border-color: #ee4d2d;
-}
-.icon-list-item{
-    width: 50px;
-    height: 50px
-}
-.icon-list-container{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-}
-.icon-list-style{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-.icon-list-wrap{
-    border-bottom: 1px solid rgba(235, 235, 235);
+.normal-input:hover {
+  border-color: #ee4d2d;
 }

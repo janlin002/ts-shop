@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'antd';
 import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
+import { Image } from 'mui-image';
 
 type Props = {
     voucherFakeData: Array<{
@@ -24,7 +25,7 @@ function CustomCarousel({ voucherFakeData, height }: Props) {
       {
             voucherFakeData.map((item) => (
               <Box>
-                <img src={item?.url} alt="" style={contentStyle} />
+                <Image src={item?.url} alt="" style={contentStyle} />
               </Box>
             ))
         }

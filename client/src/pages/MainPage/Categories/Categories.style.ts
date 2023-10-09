@@ -1,13 +1,22 @@
 import { styled, Box } from '@mui/material';
 
 export const StyledCategory = {
+  Container: styled(Box)(() => ({
+    display: 'flex',
+    justifyContent: 'center',
+  })),
+  SubContainer: styled(Box)(() => ({
+    maxWidth: '1200px',
+    border: '1px solid rgba(0, 0, 0, 0.05)',
+  })),
   Wrap: styled(Box)(() => ({
     display: 'flex',
-    justifyContent: 'space-around',
     flexWrap: 'wrap',
   })),
   Content: styled(Box)(() => ({
-    width: '110px',
+    flexBasis: 'calc(100% / 11)',
+    flexGrow: '1',
+    width: 'auto',
     height: '150px',
     border: '1px solid #f4f4f4',
     display: 'flex',

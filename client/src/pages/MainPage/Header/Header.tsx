@@ -3,6 +3,7 @@ import {
   Input,
 } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Image } from 'mui-image';
 import {
   faFacebook,
   faInstagramSquare,
@@ -58,14 +59,12 @@ function Header() {
           </StyledHeaderLink>
           <StyledHeaderUser.StyledHeaderUserButton
             startIcon={(
-              <img
+              <Image
                 src="https://www.popdaily.com.tw/u/202008/570e56ce-9be2-473f-a5da-8cbe534561b5.jpg"
                 alt=""
-                style={{
-                  width: '20px',
-                  height: '20px',
-                  borderRadius: '50%',
-                }}
+                width={20}
+                height={20}
+                style={{ borderRadius: '50%' }}
               />
           )}
           >
@@ -75,10 +74,12 @@ function Header() {
       </StyleHeadser>
 
       <Box className="main-search-bar">
-        <img
+        <Image
           src="https://logodix.com/logo/2015036.png"
           alt=""
-          style={{ maxHeight: '85px', margin: '10px' }}
+          style={{ margin: '10px' }}
+          width={85}
+          height={85}
         />
 
         <Search placeholder="請輸入" onSearch={onSearch} style={{ width: '1000px', margin: '10px' }} />

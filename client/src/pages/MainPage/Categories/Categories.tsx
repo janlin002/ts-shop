@@ -1,30 +1,30 @@
 import React from 'react';
-import { Col, Row } from 'antd';
 import CATEGORY_LIST from '@asset/data/category';
+import { Typography } from '@mui/material';
+import { Image } from 'mui-image';
 import { StyledCategory, StyledCategoryTitle } from './Categories.style';
 
 function Categories() {
-  console.log();
+  const handleContntClick = (e: MouseEvent) => {
+    const target = e.target as HTMLInputElement;
+  };
   return (
-    <Row>
-      <Col span={14} offset={5}>
+    <StyledCategory.Container>
+      <StyledCategory.SubContainer>
         <StyledCategoryTitle>
           分類
         </StyledCategoryTitle>
         <StyledCategory.Wrap>
           {CATEGORY_LIST.map((item) => (
-            <StyledCategory.Content>
-              <img src={item.image} alt="" className="category-box-image" />
-              <p>{item.title}</p>
+            <StyledCategory.Content onClick={(e) => handleContntClick(e as any)}>
+              <Image width={80} height={80} src={item.image} alt="" />
+              <Typography fontSize={13} noWrap>{item.title}</Typography>
             </StyledCategory.Content>
           ))}
         </StyledCategory.Wrap>
-      </Col>
-    </Row>
+      </StyledCategory.SubContainer>
+    </StyledCategory.Container>
   );
 }
 
 export default Categories;
-
-// 上方加陰影
-// 分類用border包起來
