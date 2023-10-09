@@ -11,7 +11,7 @@ type ListType = {
   }>
 }
 
-function VoucherIconList({ list }: ListType) {
+function DiscounIconList({ list }: ListType) {
   return (
     <StyledDiscountIconList.Container>
       <StyledDiscountIconList.Wrap>
@@ -31,8 +31,8 @@ function VoucherIconList({ list }: ListType) {
   );
 }
 
-export default VoucherIconList;
+export default DiscounIconList;
 
-VoucherIconList.propTypes = {
+DiscounIconList.propTypes = {
   list: PropTypes.instanceOf(Array).isRequired,
 };
